@@ -14,30 +14,31 @@
                 </div>
                 <div class="settings-section__notifications">
                     <div class="settings-section__field is-flex">
-                        <div class="radio-label settings-section__radio"><input id="is-notification-none" value="-1"
-                                                                                type="radio" checked="checked"
-                                                                                name="notification"
-                                                                                class="radio-label__input"> <label
+                        <div class="radio-label settings-section__radio">
+                            <input id="is-notification-none" value="-1"
+                                   type="radio" checked="checked"
+                                   name="notification"
+                                   class="radio-label__input"> <label
                                 for="is-notification-none" class="radio-label__main">Выкл</label></div>
                     </div>
                     <div class="settings-section__field is-flex">
-                        <div class="radio-label settings-section__radio"><input id="is-notification-push" value="0"
-                                                                                type="radio" disabled="disabled"
-                                                                                name="notification"
-                                                                                class="radio-label__input"> <label
+                        <div class="radio-label settings-section__radio">
+                            <input id="is-notification-push" value="0"
+                                   type="radio" disabled="disabled"
+                                   name="notification"
+                                   class="radio-label__input"> <label
                                 for="is-notification-push" class="radio-label__main">Push</label></div>
-                        <div><span class="checkbox-label__main-tooltip"><svg
-                                content="Можно установить только в приложении" xmlns="http://www.w3.org/2000/svg"
-                                class="checkbox-label__tooltip-icon icon sprite-icons" data-tippy-directive=""
-                                tabindex="0"><use href="/_nuxt/8518bae7a68da9e9ae1000967ded07dc.svg#i-i-hint"
-                                                  xlink:href="/_nuxt/8518bae7a68da9e9ae1000967ded07dc.svg#i-i-hint"></use></svg></span>
+                        <div><span class="checkbox-label__main-tooltip">
+                            <img src="../assets/info-svgrepo-com.svg" class="infoImg">
+                        </span>
                         </div>
                     </div>
                     <div class="settings-section__field is-flex">
-                        <div class="radio-label settings-section__radio"><input id="is-notification-email" value="2"
-                                                                                type="radio" checked="checked"
-                                                                                name="notification"
-                                                                                class="radio-label__input"> <label
+                        <div class="radio-label settings-section__radio">
+                            <input id="is-notification-email" value="2"
+                                   type="radio" checked="checked"
+                                   name="notification"
+                                   class="radio-label__input"> <label
                                 for="is-notification-email" class="radio-label__main">Email</label></div>
                         <div class="settings-section__current-param"><span
                                 class="settings-section__current-param-text"></span> <span
@@ -52,9 +53,10 @@
                                                              fill="#2DC574"></path></svg></span></div>
                     </div>
                     <div class="settings-section__field is-flex">
-                        <div class="radio-label settings-section__radio"><input id="is-notification-telegram"
-                                                                                type="radio" name="notification"
-                                                                                value="1" class="radio-label__input">
+                        <div class="radio-label settings-section__radio">
+                            <input id="is-notification-telegram"
+                                   type="radio" name="notification"
+                                   value="1" class="radio-label__input">
                             <label for="is-notification-telegram" class="radio-label__main"><a
                                     href="https://avclick.me/v/AVinfoBot" class="radio-label__main--link">Telegram
                                 ID</a></label></div>
@@ -75,8 +77,6 @@
 
         </div>
     </div>
-
-
 
 
 </template>
