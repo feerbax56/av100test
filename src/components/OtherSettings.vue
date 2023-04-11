@@ -13,16 +13,16 @@
             <div class="labelBlock">
                 <v-container fluid>
                     <v-checkbox
-                        v-model="checkbox1"
-                        :label="`Автоматически переходить к новым объявлениям`"
+                            v-model="checkbox1"
+                            :label="`Автоматически переходить к новым объявлениям`"
                     ></v-checkbox>
                     <v-checkbox
-                        v-model="checkbox2"
-                        :label="`Включить цвета в ленте`"
+                            v-model="checkbox2"
+                            :label="`Включить цвета в ленте`"
                     ></v-checkbox>
                 </v-container>
 
-                     <img src="../assets/info-svgrepo-com.svg" class="infoImg">
+                <img src="../assets/info-svgrepo-com.svg" class="infoImg">
             </div>
 
             <div>
@@ -39,8 +39,8 @@
                 </div>
 
             </div>
-            <button>
-                <span>Сохранить</span>
+            <button class="btnSave">
+                Сохранить
             </button>
         </div>
 
@@ -72,5 +72,20 @@ export default {
 .labelBlock {
     display: flex;
     align-content: center;
+}
+
+.btnSave {
+    background-color: rgb(45, 197, 116);
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 13px 20px;
+   font-size: 13px;
+    color: white;
+    border-radius: 5px;
+}
+
+.btnSave:active {
+    background: #26a763;
 }
 </style>

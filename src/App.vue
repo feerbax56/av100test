@@ -22,10 +22,12 @@ export default {
     color: #2c3e50;
     margin-top: 60px;
 }
-
+body{
+    padding: 20px 15px 0px;
+}
 .mainBlock{
 display: flex;
-
+padding-bottom: 40px;
 }
 .infoImg {
     width: 16px;
@@ -40,7 +42,7 @@ display: flex;
 
 }
 .bodyBlock{
-    width: 392px;
+    width: 490px;
     text-align: start;
 }
 </style>
