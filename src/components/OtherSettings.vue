@@ -25,20 +25,6 @@
                 <img src="../assets/info-svgrepo-com.svg" class="infoImg">
             </div>
 
-            <div>
-                <div class="settings-section__field" style="display: block;">
-                    <div class="checkbox-label has-tooltip">
-                        <div style="display: flex;"><input id="input-126" type="checkbox" class="checkbox-label__input"
-                                                           value="false"> <label for="input-126"
-                                                                                 class="checkbox-label__main">
-                            Включить цвета в ленте
-                        </label>
-                            <img src="../assets/info-svgrepo-com.svg" class="infoImg">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             <button class="btnSave">
                 Сохранить
             </button>
