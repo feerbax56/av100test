@@ -33,8 +33,14 @@ display: flex;
 }
 .nameBlock{
     width: 200px;
+    text-align: start;
+    line-height: 1.5;
+    font-size: 18px;
+    font-weight: 600;
+
 }
 .bodyBlock{
     width: 392px;
+    text-align: start;
 }
 </style>

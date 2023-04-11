@@ -5827,6 +5827,11 @@ vue@^3.2.13:
     "@vue/server-renderer" "3.2.47"
     "@vue/shared" "3.2.47"
 
+vuetify@^3.1.13:
+  version "3.1.13"
+  resolved "https://registry.yarnpkg.com/vuetify/-/vuetify-3.1.13.tgz#8236a24e0a7a24ab294ca07c75fdfcf5d74acd44"
+  integrity sha512-mC2UvWqS3Ne/aZ6Q+79kiL36xSe5jGxm0KWWq2e4SRxuqIE14IbyzqfXvU0bEqns0dHU5dOiKCMM9jHZFDLKgQ==
+
 watchpack@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-2.4.0.tgz#fa33032374962c78113f93c7f2fb4c54c9862a5d"
