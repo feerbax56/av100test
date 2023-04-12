@@ -6,23 +6,20 @@
                 <label class="multiselectCaption">Часовой пояс</label>
                 <v-select class="inputSity"
                           clearable
+                          :placeholder="timezonestring"
                           :items="['Калининград', 'Москва', 'Самара', 'Екатеринбург', 'Омск', 'Красноярск','Иркутск', 'Якутск', 'Владивасток', 'Магадан', 'Камчатка' ]"
                 ></v-select>
             </div>
+            <div class="checkBoxBlock">
+                <div class="labelBlock">
+                    <v-checkbox label="Автоматически переходить к новым объявлениям" color="success"></v-checkbox>
+                    <img src="../assets/info-svgrepo-com.svg" class="infoImg">
+                </div>
+                <div class="labelBlock">
+                    <v-checkbox label="Включить цвета в ленте" color="success"></v-checkbox>
+                    <img src="../assets/info-svgrepo-com.svg" class="infoImg">
+                </div>
 
-            <div class="labelBlock">
-                <v-container fluid>
-                    <v-checkbox
-                            v-model="checkbox1"
-                            :label="`Автоматически переходить к новым объявлениям`"
-                    ></v-checkbox>
-                    <v-checkbox
-                            v-model="checkbox2"
-                            :label="`Включить цвета в ленте`"
-                    ></v-checkbox>
-                </v-container>
-
-                <img src="../assets/info-svgrepo-com.svg" class="infoImg">
             </div>
 
             <button class="btnSave">
@@ -38,6 +35,8 @@
 <script>
 export default {
     name: 'OtherSettings',
+    props: ['timezonestring'],
+
 
 }
 
@@ -58,6 +57,13 @@ export default {
 .labelBlock {
     display: flex;
     align-content: center;
+    align-items: center;
+}
+
+.checkBoxBlock {
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
 }
 
 .btnSave {
@@ -66,7 +72,7 @@ export default {
     width: 100%;
     height: 44px;
     padding: 13px 20px;
-   font-size: 13px;
+    font-size: 13px;
     color: white;
     border-radius: 5px;
 }

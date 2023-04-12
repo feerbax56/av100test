@@ -2,67 +2,75 @@
     <div class="mainBlock">
         <div class="nameBlock">Учётная запись</div>
         <div class="bodyBlock">
-            <div class="wide-section__body">
-                <div class="settings-section__fields">
-                    <div class="input-field settings-section__field" readonly="readonly" value="Частное лицо">
-                        <label class="input-field__label caption">Компания</label>
-                        <div class="input-field__main"><!---->
-                            <input type="text" name="text-field" placeholder="" readonly="readonly"
-                                   class="input-field__input input">
-                            <div class="extra-field__currency">
-
-                            </div>  <!----></div>
+            <div>
+                <div>
+                    <div class="inputBlock">
+                        <label class="inputName">Компания</label>
+                        <div>
+                            <input type="text" name="text-field" :placeholder='companyname' readonly="readonly"
+                                   class="input">
+                        </div>
                     </div>
-                    <div class="input-field settings-section__field" readonly="readonly" value="9878420298"><label
-                            class="input-field__label caption">Логин</label>
-                        <div class="input-field__main"><!----> <input type="text" name="text-field" placeholder=""
-                                                                      readonly="readonly"
-                                                                      class="input-field__input input">
-                            <div class="extra-field__currency">
-
-                            </div>  <!----></div>
+                    <div class="inputBlock">
+                        <label class="inputName">Логин</label>
+                        <div>
+                            <input type="text" name="text-field" :placeholder='login'
+                                   class="input">
+                        </div>
                     </div>
-                    <div class="input-field settings-section__field" value="79878420298"><label
-                            class="input-field__label caption">Номер телефона</label>
-                        <div class="input-field__main"><!----> <input type="text" name="text-field" placeholder=""
-                                                                      class="input-field__input input">
-                            <div class="extra-field__currency">
-
-                            </div>  <!----></div>
+                    <div class="inputBlock">
+                        <label class="inputName">Номер телефона</label>
+                        <div>
+                            <input type="text" name="text-field" :placeholder='phone' class="input">
+                        </div>
                     </div>
-                    <div class="input-field settings-section__field" value="Анонимус-2"><label
-                            class="input-field__label caption">Имя</label>
-                        <div class="input-field__main"><!----> <input type="text" name="text-field" placeholder=""
-                                                                      class="input-field__input input">
-                            <div class="extra-field__currency">
-
-                            </div>  <!----></div>
+                    <div class="inputBlock">
+                        <label class="inputName">Имя</label>
+                        <div>
+                            <input type="text" name="text-field" :placeholder='fname' class="input">
+                        </div>
                     </div>
-                    <div class="input-field settings-section__field" value=""><label class="input-field__label caption">Фамилия</label>
-                        <div class="input-field__main"><!----> <input type="text" name="text-field" placeholder=""
-                                                                      class="input-field__input input">
-                            <div class="extra-field__currency">
-
-                            </div>
-                            <small class="settings-section__info">* Не обязательно</small> <!----></div>
+                </div>
+                <div class="inputBlock">
+                    <label class="inputName">Фамилия</label>
+                    <div>
+                        <input type="text" name="text-field" :placeholder='lname' class="input">
+                        <small>* Не обязательно</small>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-
-
 </template>
 
 <script>
 export default {
     name: 'MeAccount',
+    props: ['companyname', 'login', 'phone', 'fname', 'lname'],
+    methods: {
+        check() {
+            console.log(this.phone)
+        }
+    },
 }
-
 </script>
 
 <style>
+.input {
+    border: 1px solid beige;
+    border-radius: 3px;
+    width: 190px;
+    font-size: 12px;
+    margin: 5px;
+}
 
+.inputName {
+    width: 96px;
+    font-size: 12px;
+}
+
+.inputBlock {
+    display: flex;
+
+}
 </style>
