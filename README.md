@@ -1,24 +1,23 @@
 # av100test
 
 ## Project setup
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
+### Краткое описание
 
-### Lints and fixes files
 ```
-yarn lint
+при монтировании Settings.vue происходит захардкоженный запрос POST /login
+ с моим паролем и логином для получения userId и X-User-Token. Эти данные сохраняю
+  в LocalStorage для дальнейшего запроса GET /user/{userId}.
+  
+  
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
