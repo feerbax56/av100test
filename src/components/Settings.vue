@@ -1,12 +1,10 @@
 <template>
     <other-settings :timezonestring="userInfo.timezonestring"/>
     <go-to-card/>
-    <new-collection-alerts/>
+    <new-collection-alerts :telegramChat="userInfo.telegramChat"/>
     <me-account :companyname="userInfo.companyname" :login="userInfo.login"
                 :phone="userInfo.phone" :fname="userInfo.fname" :lname="userInfo.lname"/>
     <CallViaSIP/>
-  <!--    <div>1111{{userInfo.login}}</div>-->
-  <!--    <button @click="check"> проверка</button>-->
 </template>
 
 <script>
@@ -56,6 +54,7 @@ export default {
                 sipid: '',
                 updatePeriod: 0,
                 filterMaxCount: 0,
+                telegramChat: '',
                 turbosip: '',
                 turbosip5accessto: '',
                 turbosip20accessto: '',

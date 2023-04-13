@@ -23,7 +23,7 @@ export default {
     margin-top: 60px;
 }
 body{
-    padding: 20px 15px 0px;
+    padding: 20px 15px 0;
 }
 .mainBlock{
 display: flex;
@@ -37,8 +37,10 @@ padding-bottom: 40px;
     width: 200px;
     text-align: start;
     line-height: 1.5;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
+    display: flex;
+    align-items: flex-start;
 
 }
 .bodyBlock{
