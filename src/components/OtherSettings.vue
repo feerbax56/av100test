@@ -12,19 +12,21 @@
             </div>
             <div class="checkBoxBlock">
                 <div class="labelBlock">
-                    <v-checkbox label="Автоматически переходить к новым объявлениям" color="success"></v-checkbox>
-                    <img src="../assets/info-svgrepo-com.svg" class="infoImg">
+                    <input type="checkbox" id="auto" value="auto" v-model="checkedNames">
+                    <label for="auto">Автоматически переходить к новым объявлениям</label>
+                    <!--                    <v-checkbox label="Автоматически переходить к новым объявлениям" color="success"></v-checkbox>-->
+                    <img src="../assets/info-svgrepo-com.svg" class="infoImg" alt="infoImg">
                 </div>
                 <div class="labelBlock">
-                    <v-checkbox label="Включить цвета в ленте" color="success"></v-checkbox>
-                    <img src="../assets/info-svgrepo-com.svg" class="infoImg">
+                    <input type="checkbox" id="color" value="color" v-model="checkedNames">
+                    <label for="color">Включить цвета в ленте</label>
+                    <!--                    <v-checkbox label="Включить цвета в ленте" color="success"></v-checkbox>-->
+                    <img src="../assets/info-svgrepo-com.svg" class="infoImg" alt="infoImg">
                 </div>
 
             </div>
 
-            <button class="btnSave">
-                Сохранить
-            </button>
+
         </div>
 
     </div>
@@ -66,18 +68,5 @@ export default {
     flex-direction: column;
 }
 
-.btnSave {
-    background-color: rgb(45, 197, 116);
-    display: block;
-    width: 100%;
-    height: 44px;
-    padding: 13px 20px;
-    font-size: 13px;
-    color: white;
-    border-radius: 5px;
-}
 
-.btnSave:active {
-    background: #26a763;
-}
 </style>

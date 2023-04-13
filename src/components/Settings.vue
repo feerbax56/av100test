@@ -1,10 +1,20 @@
 <template>
     <other-settings :timezonestring="userInfo.timezonestring"/>
     <go-to-card/>
-    <new-collection-alerts :telegramChat="userInfo.telegramChat"/>
-    <me-account :companyname="userInfo.companyname" :login="userInfo.login"
-                :phone="userInfo.phone" :fname="userInfo.fname" :lname="userInfo.lname"/>
+    <new-collection-alerts :telegramChat="userInfo.telegramChat"
+                           :emailPlas="userInfo.email"
+                           @sendEmail="sendEmail"
+    />
+    <me-account :companyname="userInfo.companyname"
+                :login="userInfo.login"
+                :phone="userInfo.phone"
+                :fname="userInfo.fname"
+                :lname="userInfo.lname"/>
     <CallViaSIP/>
+
+    <button class="btnSave" @click="updateEmail">
+        Сохранить
+    </button>
 </template>
 
 <script>
@@ -25,9 +35,29 @@ export default {
         CallViaSIP,
     },
     methods: {
-        check() {
-            console.log(this.$data)
-        }
+        sendEmail(email) {
+            this.userInfo.email = email
+        },
+        async updateEmail() {
+            console.log('старт ')
+            let userTocen = localStorage.getItem('X-User-Token').substring(1, 37)
+            console.log(userTocen)
+            let userId = localStorage.getItem('userId')
+            const sucsses = await axios.put(`https://api.av100.ru/v3/user/${userId}`, {
+                    email: this.userInfo.email
+                },
+                {
+                    headers: {
+                        'X-Api-Key': '8bcfb6e1-4fa8-4fae-872c-a435bbdbe8d9',
+                        'X-User-Token': `${userTocen}`,
+                        // 'X-User-Token': '8a11b936-0a42-48bc-93d9-92330ebbc531',
+                        'X-Device-OS': 'chromeOS'
+                    }
+                })
+            if (sucsses.status === 200) {
+                console.log('111111')
+            }
+        },
     },
     data() {
         return {
@@ -38,6 +68,7 @@ export default {
                 expire: 0,
                 autoru: 0,
                 phone: '',
+                email: '',
                 sendMethod: 0,
                 lname: '',
                 fname: '',
@@ -65,6 +96,7 @@ export default {
             }
         }
     },
+
 
     mounted() {
         this.$nextTick(async function () {
@@ -103,3 +135,23 @@ export default {
 
 
 </script>
+
+<style>
+
+.btnSave {
+    background-color: rgb(45, 197, 116);
+    display: block;
+    width: 392px;
+    height: 44px;
+    padding: 13px 20px;
+    font-size: 13px;
+    color: white;
+    border-radius: 5px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+.btnSave:active {
+    background: #26a763;
+}
+</style>

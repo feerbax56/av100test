@@ -52,7 +52,10 @@
                     <div>
                         <input v-model="email"
                                :rules="emailRules"
-                               required class="input">
+                               required class="input"
+                               :placeholder="emailPlas"
+                               v-on:blur="sendEmail"
+                        >
                     </div>
 
                     <div>
@@ -116,19 +119,22 @@
 <script>
 export default {
     name: 'NewCollectionAlerts',
-    props: ['telegramChat',],
+    props: ['telegramChat', 'emailPlas'],
+    methods: {
+        sendEmail() {
+            this.$emit('sendEmail', this.email)
+        }
+    },
     data: () => ({
         valid: false,
         email: '',
         emailRules: [
             value => {
                 if (value) return true
-
                 return 'E-mail is requred.'
             },
             value => {
                 if (/.+@.+\..+/.test(value)) return true
-
                 return 'E-mail must be valid.'
             },
         ],
